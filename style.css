@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    font-size: 0.9375rem;
+    background: hsl(0, 0%, 95%);
+    height: 100vh;
+}
+.light {
+    font-weight: 200;
+}
+h1 {
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+p {
+    color: hsl(229, 6%, 66%);
+}
+.img {
+    text-align: right;
+    width: 90%;
+}
+.cyan {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.red {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.orange {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.blue {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 375px;
+    padding: 1.5em;
+    padding-top: 6em; 
+}
+.cards {
+    display: grid;
+    grid-gap: 2em;
+    margin: 0 auto;    
+}
+.card {
+    background: white;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.first-paragraph {
+    text-align: center;
+}
+
+@media (min-width: 850px){
+    .cards {
+        grid-template: repeat(4, 1fr) / repeat(12, 1fr);
+        grid-template-areas: 
+        ". . . . r r r r . . . ."
+        "c c c c r r r r b b b b"
+        "c c c c o o o o b b b b"
+        ". . . . o o o o . . . .";
+        margin: 0 4em;
+    }
+    .cards p {
+        text-align: left;
+    }
+    .red {
+        grid-area: r;
+
+    }
+    .orange {
+        grid-area: o;
+    }
+    .cyan {
+        grid-area: c;
+    }
+    .blue {
+        grid-area: b;
+    }
+
+    .container {
+
+        max-width: 1440px; 
+        text-align: center;
+    }
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .first-paragraph {
+        max-width: 500px;
+        margin: 1.5em auto;
+    }
+}
