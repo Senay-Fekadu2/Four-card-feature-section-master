@@ -53,6 +53,7 @@ main {
     background: white;
     padding: 1em;
     border-radius: 0.5em;
+    box-shadow: 10px 10px 25px hsl(229, 6%, 66%);
 }
 .first-paragraph {
     text-align: center;
